@@ -8,20 +8,19 @@
         "description": "WikiTec Es el lugar donde aprenderas todo acerca de la escuela Instituto Tecnólogico de Software <b>padre de la UPY</b>, en esta web encontraras contenido acerca de alumnos, sitios, materias, maestros, etc; divierte :).",
         "features": [
           {
-            "icon": "fa-formulario",
-            "title": "Formulario",
-            "description": "Formulario para saber que deseas añadir."
-          },
-          {
             "icon": "fa-users",
             "title": "Comunidad",
-            "description": "Aprende acerca de la comunidad. Se parte de ella."
+            "description": "Únete a una comunidad de aprendizaje."
           },
-          
           {
-            "icon": "fa-codigo", 
-            "title":"Saludos",
-            "description":"Agradecemos tu visita y esperamos que te haya sido útil este sitio web."
+            "icon": "fa-file-alt",  
+            "title": "Formulario",
+            "description": "Formulario para saber qué deseas añadir."
+          },
+          {
+            "icon": "fa-handshake", 
+            "title": "Saludos",
+            "description": "Agradecemos tu visita y esperamos que te haya sido útil este sitio web."
           }
         ],
         "cta1": {
