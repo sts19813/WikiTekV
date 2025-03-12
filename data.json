@@ -5,7 +5,7 @@
       "title": "Bienvenido a WikiTec",
       "content": {
         "heading": "Bienvenido a WikiTec",
-        "description": "WikiTec Es el lugar donde aprenderas todo acerca de la escuela Instituto Tecnólogico de Software <b>padre de la UPY</b>, en esta web encontraras contenido acerca de alumnos, sitios, materias, maestros, etc; divierte :).",
+        "description": "WikiTec Es el lugar donde aprenderas todo acerca de la escuela Instituto Tecnólogico de Software <b>padre de la UPY</b>, en esta web encontraras contenido acerca de alumnos, sitios, materias, maestros, etc; divierte y pasate un buen rato aprendiendo acerca de esta escuela y sus integrantes :).",
         "features": [
           {
             "icon": "fa-users",
@@ -15,7 +15,7 @@
           {
             "icon": "fa-file-alt",  
             "title": "Formulario",
-            "description": "Formulario para saber qué deseas añadir."
+            "description": "Formulario para saber que deseas añadir."
           },
           {
             "icon": "fa-handshake", 
@@ -99,7 +99,7 @@
       "content": {
         "heading": "Miguel Angel Palomera",
         "description": "Miguel primer neonazi en Yucatán, ex locutor de la k-buena.",
-        "imagen": "img/Miguel-Palomera (1).png"
+        "imagen": "img/Miguel-Palomera (1)-Photoroom.png"
       }
     }
   ]
