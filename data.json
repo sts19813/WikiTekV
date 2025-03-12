@@ -3,9 +3,10 @@
     {
       "id": "inicio",
       "title": "Bienvenido a WikiTec",
+      "background": "img/fondo-inicio.jpg",
       "content": {
         "heading": "Bienvenido a WikiTec",
-        "description": "WikiTec Es el lugar donde aprenderas todo acerca de la escuela Instituto Tecnólogico de Software <b>padre de la UPY</b>, en esta web encontraras contenido acerca de alumnos, sitios, materias, maestros, etc; divierte y pasate un buen rato aprendiendo acerca de esta escuela y sus integrantes :).",
+        "description": "WikiTec es el lugar donde aprenderás todo acerca de la escuela Instituto Tecnológico de Software <b>padre de la UPY</b>, en esta web encontrarás contenido acerca de alumnos, sitios, materias, maestros, etc; diviértete y pásate un buen rato aprendiendo acerca de esta escuela y sus integrantes :).",
         "features": [
           {
             "icon": "fa-users",
@@ -15,7 +16,7 @@
           {
             "icon": "fa-file-alt",  
             "title": "Formulario",
-            "description": "Formulario para saber que deseas añadir."
+            "description": "Formulario para saber qué deseas añadir."
           },
           {
             "icon": "fa-handshake", 
@@ -53,17 +54,14 @@
             "name": "Yuri",
             "target": "yuri"
           },
-
           {
             "name": "Mikel",
-            "target": "Mikel"
+            "target": "miguel"
           },
-
           {
             "name": "Lore",
             "target": "lore"
           }
-          
         ]
       },
       "footer": {
@@ -78,28 +76,43 @@
     {
       "id": "gerardo",
       "title": "Gerardo Pitécus",
+      "background": "img/fondo-gerardo.jpg",
       "content": {
         "heading": "Gerardo Marrufo Palomera",
-        "description": "Gerardo es un individuo único en su especie.",
-        "imagen": "img/IMG_0243.PNG"
+        "description": "Gerardo es un individuo único en su especie. Nacido en Yucatán, Gerardo es conocido por su amor por la tecnología y su afición por la programación. Ha sido parte fundamental en varios proyectos del instituto, siempre buscando innovar y crear soluciones útiles.",
+        "imagen": "img/IMG_0243.PNG",
+        "extra_info": {
+          "hobbies": "Le gusta jugar videojuegos y escuchar música electrónica.",
+          "quote": "\"La tecnología es la clave para mejorar el futuro\"."
+        }
       }
     },
     {
       "id": "yuri",
       "title": "Yuri Canhel",
+      "background": "img/fondo-yuri.jpg",
       "content": {
         "heading": "Yuri Canhel Balam Toraya",
-        "description": "Yuri es un gran fanático de Sonic.",
-        "imagen": "img/IMG_0241.PNG"
+        "description": "Yuri es un gran fanático de Sonic, conocido por su creatividad en el diseño gráfico y su enfoque en la resolución de problemas mediante la programación. Se dedica a crear soluciones visuales en la web, y siempre está dispuesto a compartir su conocimiento con los demás.",
+        "imagen": "img/IMG_0241.PNG",
+        "extra_info": {
+          "hobbies": "Jugar videojuegos, principalmente de la saga de Sonic, y diseñar gráficos.",
+          "quote": "\"Cada línea de código es una oportunidad para mejorar.\""
+        }
       }
     },
     {
-      "id": "Mikel",
+      "id": "miguel",
       "title": "Miguel Angel Palomera",
+      "background": "img/fondo-miguel.jpg",
       "content": {
         "heading": "Miguel Angel Palomera",
-        "description": "Miguel primer neonazi en Yucatán, ex locutor de la k-buena.",
-        "imagen": "img/Miguel-Palomera (1)-Photoroom.png"
+        "description": "Miguel es el primer neonazi en Yucatán, ex locutor de la K-Buena, y un apasionado de la tecnología. A pesar de su polémica figura pública, ha trabajado en diversas iniciativas para promover el pensamiento crítico y la reflexión dentro de la comunidad.",
+        "imagen": "img/Miguel-Palomera (1)-Photoroom.png",
+        "extra_info": {
+          "hobbies": "La música y la programación.",
+          "quote": "\"La controversia puede ser el motor del cambio.\""
+        }
       }
     }
   ]

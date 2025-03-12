@@ -15,7 +15,6 @@
     <div class="logo-container">
       <h1>
         <i class="fa-solid fa-microchip tek-icon"></i>
-        <!-- Ahora el enlace apunta al hash para la página de inicio -->
         <a href="#inicio" class="wikitec">WikiTec</a>
       </h1>
     </div>
@@ -26,7 +25,6 @@
     </div>
     <nav id="menu" class="hidden">
       <ul>
-        <!-- Se usan enlaces hash para que el script maneje la navegación -->
         <li><a href="#indice"><i class="fa-solid fa-list-ul"></i> Índice</a></li>
         <li><a href="#Gerardo"><i class="fa-solid fa-users"></i> Alumnos</a></li>
         <li><a href="#sitios"><i class="fa-solid fa-map-location-dot"></i> Sitios</a></li>
@@ -39,46 +37,14 @@
 
   <!-- Contenedor principal donde se inyectará el contenido dinámico -->
   <main id="app" class="home-content">
-    <!-- Contenido por defecto (página de inicio) -->
-    <div class="hero-section">
-      <h2 class="bienvenida">Bienvenido a <span class="wikitec-highlight">WikiTec</span></h2>
-      <p class="parrafo">Tu fuente de información sobre el Tecnológico, creada por y para estudiantes.</p>
-      
-      <div class="features-container">
-        <div class="feature-card">
-          <i class="fa-solid fa-user-graduate"></i>
-          <h3>Alumnos</h3>
-          <p>Conoce a los estudiantes y sus historias.</p>
-        </div>
-        <div class="feature-card">
-          <i class="fa-solid fa-chalkboard-teacher"></i>
-          <h3>Materias</h3>
-          <p>Información sobre las clases y programas.</p>
-        </div>
-        <div class="feature-card">
-          <i class="fa-solid fa-landmark"></i>
-          <h3>Sitios</h3>
-          <p>Explora los lugares importantes del campus.</p>
-        </div>
-      </div>
-      
-      <div class="cta-section">
-        <a href="#indice" class="boton primary-btn">
-          <i class="fa-solid fa-arrow-right"></i> Explorar WikiTec
-        </a>
-        <a href="#lore" class="boton secondary-btn">
-          <i class="fa-solid fa-book-open"></i> Descubre el Lore
-        </a>
-      </div>
-    </div>
-    
-    <div class="mascot-section">
-      <img class="gif bounce-effect" src="img/calavera.gif" alt="Calavera animada - Mascota de WikiTec">
-      <div class="mascot-info pulse-effect">
-        <p>¡Nuestra mascota te da la bienvenida!</p>
-      </div>
-    </div>
+    <!-- Este contenido será reemplazado por JavaScript -->
   </main>
+
+  <!-- Botones de navegación -->
+  <div class="navigation-buttons">
+    <button id="prev-page" class="nav-button">← Anterior</button>
+    <button id="next-page" class="nav-button">Siguiente →</button>
+  </div>
   
   <footer>
     <div class="footer-content">

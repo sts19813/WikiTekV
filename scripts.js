@@ -1,33 +1,47 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Funcionalidad para alternar la visibilidad del menú
+    // Alternar visibilidad del menú
     const menuToggle = document.getElementById("menu-toggle");
     const menu = document.getElementById("menu");
-    
+
     menuToggle.addEventListener("click", () => {
         menu.classList.toggle("hidden");
     });
 
-    // Función para cargar el contenido de la página según el hash
+    const pages = ["inicio", "gerardo", "yuri", "miguel"];
+    let currentPageIndex = 0;
+
+    // Función para cambiar el fondo
+    function updateBodyBackground(pageId) {
+        document.body.classList.remove("body-portada", "body-gerardo", "body-yuri", "body-miguel");
+        document.body.classList.add(`body-${pageId}`);
+    }
+
+    // Función para actualizar botones
+    function updateButtons() {
+        const prevButton = document.getElementById("prev-page");
+        const nextButton = document.getElementById("next-page");
+        prevButton.disabled = currentPageIndex === 0;
+        nextButton.disabled = currentPageIndex === pages.length - 1;
+    }
+
+    // Función para cargar el contenido de la página
     function loadPage(pageId) {
         fetch("data.json")
             .then(response => response.json())
             .then(data => {
-                console.log("Datos cargados:", data); // Ver qué se está cargando realmente
+                const app = document.getElementById("app");
 
-                // Verificación de la estructura esperada del JSON
-                if (!data || !data.pages) {
-                    console.error("El JSON no tiene la estructura esperada:", data);
+                // Verificar si el elemento existe
+                if (!app) {
+                    console.error("Elemento #app no encontrado");
                     return;
                 }
 
-                // Buscamos el objeto de la página correspondiente en el JSON
-                const pageData = data.pages.find(p => p.id.toLowerCase() === pageId.toLowerCase());
+                // Buscar la página en el JSON
+                const pageData = data.pages.find(p => p.id === pageId);
 
                 if (pageData) {
-                    document.title = pageData.title;
-                    const app = document.getElementById("app");
-
-                    // Si la página es la de inicio, construimos el contenido completo con hero, features, cta y mascota
+                    // Construir el HTML según el tipo de página
                     if (pageId === "inicio") {
                         app.innerHTML = `
                             <div class="hero-section">
@@ -68,35 +82,6 @@ document.addEventListener("DOMContentLoaded", () => {
                             </section>
                         `;
                     }
-
-                    // **Actualizar menú dinámicamente**
-                    const firstPage = data.pages.find(p => p.id === "inicio");
-                    if (firstPage && firstPage.header) {
-                        const menuList = document.querySelector("#menu ul");
-                        menuList.innerHTML = "";
-                        firstPage.header.menu.forEach(item => {
-                            const li = document.createElement("li");
-                            const a = document.createElement("a");
-                            a.textContent = item.name;
-                            a.href = `#${item.target}`;
-                            li.appendChild(a);
-                            menuList.appendChild(li);
-                        });
-                    }
-
-                    // **Actualizar footer dinámicamente**
-                    if (firstPage && firstPage.footer) {
-                        document.querySelector("footer .footer-content p").textContent = firstPage.footer.text;
-                        const socialLinksContainer = document.getElementById("social-links");
-                        socialLinksContainer.innerHTML = "";
-                        Object.entries(firstPage.footer.socialLinks).forEach(([key, url]) => {
-                            const a = document.createElement("a");
-                            a.href = url;
-                            a.classList.add("social-icon");
-                            a.innerHTML = `<i class="fa-brands fa-${key}"></i>`;
-                            socialLinksContainer.appendChild(a);
-                        });
-                    }
                 } else {
                     console.warn(`No se encontró la página con ID: ${pageId}`);
                 }
@@ -104,13 +89,34 @@ document.addEventListener("DOMContentLoaded", () => {
             .catch(error => console.error("Error al cargar el JSON:", error));
     }
 
-    // Escuchar cambios en el hash para navegar sin recargar la página
-    window.addEventListener("hashchange", () => {
-        const pageId = location.hash.replace("#", "") || "inicio";
+    // Función unificada de navegación
+    function navigateToPage(index) {
+        if (index < 0 || index >= pages.length) return;
+        currentPageIndex = index;
+        const pageId = pages[index];
+        window.location.hash = `#${pageId}`;
+        updateBodyBackground(pageId);
+        updateButtons();
         loadPage(pageId);
+    }
+
+    // Eventos para botones
+    document.getElementById("prev-page").addEventListener("click", () => navigateToPage(currentPageIndex - 1));
+    document.getElementById("next-page").addEventListener("click", () => navigateToPage(currentPageIndex + 1));
+
+    // Manejar cambios de hash (para el menú)
+    window.addEventListener("hashchange", () => {
+        const newPageId = location.hash.replace("#", "") || "inicio";
+        const newIndex = pages.indexOf(newPageId);
+        if (newIndex !== -1 && newIndex !== currentPageIndex) {
+            currentPageIndex = newIndex;
+            navigateToPage(newIndex);
+        }
     });
 
-    // Cargar la página inicial (por defecto o según el hash actual)
+    // Inicialización
     const initialPage = location.hash.replace("#", "") || "inicio";
-    loadPage(initialPage);
+    currentPageIndex = pages.indexOf(initialPage);
+    if (currentPageIndex === -1) currentPageIndex = 0;
+    navigateToPage(currentPageIndex);
 });
