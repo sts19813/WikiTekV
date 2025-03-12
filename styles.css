@@ -674,49 +674,6 @@ html, body {
     padding: 0;
 }
 
-.body-alumnos {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Ocupa toda la pantalla */
-    background-image: url(img/sonicpatas.webp); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-/* Capa semitransparente */
-.body-alumnos::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh; /* Asegura que cubra toda la pantalla */
-    background-color: rgba(0, 0, 0, 0.5); /* Negro con 50% de opacidad */
-    z-index: 0;
-}
-
-/* Asegurar que el contenido esté por encima de la capa */
-.body-alumnos * {
-    position: relative;
-    z-index: 1;
-    color: white; /* Para que el texto se vea bien */
-}
-
-/* Estilos generales */
-body {
-    font-family: 'Poppins', 'Arial', sans-serif;
-    text-align: center;
-    color: #B6D5FF; /* Azul claro mejorado */
-    background-color: rgba(0, 0, 0, 0.5); /* Negro con 50% de opacidad */
-    padding: 20px;
-    margin: 0;
-    animation: none;
-    line-height: 1.7;
-    overflow-x: hidden;
-    font-weight: 300;
-}
 /* Contenedores y elementos principales */
 .container {
     position: relative;
@@ -796,7 +753,6 @@ body {
     border-radius: 10px; /* Manteniendo formato rectangular */
     display: block;
     margin: 20px auto;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
     transition: transform 0.4s, box-shadow 0.4s;
     filter: brightness(1.05);
 }
@@ -805,6 +761,7 @@ body {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
     animation: imageTilt 5s infinite alternate;
 }
+
 @keyframes imageTilt {
     0% { transform: scale(1.06) translateY(-8px) rotate(0deg); }
     25% { transform: scale(1.06) translateY(-8px) rotate(1deg); }
@@ -932,7 +889,7 @@ h2::after {
     text-align: left;
     font-size: 30px;
     margin-bottom: 15px;
-    color: #5BADFF; /* Azul brillante */
+    color: #15488a;
     animation: bioColor 5s infinite alternate;
 }
 @keyframes bioColor {
@@ -1345,4 +1302,48 @@ footer p {
     );
     background-size: 200% 100%;
     animation: backgroundShimmer 3s infinite;
+}
+
+/* Contenedor dinámico */
+.perfil-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.caracteristica-item {
+    margin: 15px 0;
+    background: rgba(27, 38, 59, 0.7);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid #FFD966;
+}
+
+#dynamic-content {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.ocupacion-container {
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(13, 27, 42, 0.8);
+    border-radius: 10px;
+}
+
+/* Transiciones suaves */
+#home-content, #profile-content {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+}
+
+.visible {
+    opacity: 1;
+    pointer-events: all;
+    position: relative;
 }

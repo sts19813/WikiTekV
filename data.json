@@ -1,0 +1,107 @@
+{
+  "pages": [
+    {
+      "id": "inicio",
+      "title": "Bienvenido a WikiTec",
+      "content": {
+        "heading": "Bienvenido a WikiTec",
+        "description": "WikiTec Es el lugar donde aprenderas todo acerca de la escuela Instituto Tecnólogico de Software <b>padre de la UPY</b>, en esta web encontraras contenido acerca de alumnos, sitios, materias, maestros, etc; divierte :).",
+        "features": [
+          {
+            "icon": "fa-formulario",
+            "title": "Formulario",
+            "description": "Formulario para saber que deseas añadir."
+          },
+          {
+            "icon": "fa-users",
+            "title": "Comunidad",
+            "description": "Aprende acerca de la comunidad. Se parte de ella."
+          },
+          
+          {
+            "icon": "fa-codigo", 
+            "title":"Saludos",
+            "description":"Agradecemos tu visita y esperamos que te haya sido útil este sitio web."
+          }
+        ],
+        "cta1": {
+          "link": "/learn-more",
+          "icon": "fa-info",
+          "text": "Aprende más"
+        },
+        "cta2": {
+          "link": "/join-us",
+          "icon": "fa-users",
+          "text": "Únete"
+        },
+        "mascot": {
+          "image": "img/calavera.gif",
+          "alt": "Mascota de WikiTec",
+          "info": "Conoce a nuestra mascota."
+        }
+      },
+      "header": {
+        "menu": [
+          {
+            "name": "Inicio",
+            "target": "inicio"
+          },
+          {
+            "name": "Gerardo",
+            "target": "gerardo"
+          },
+          {
+            "name": "Yuri",
+            "target": "yuri"
+          },
+
+          {
+            "name": "Mikel",
+            "target": "Mikel"
+          },
+
+          {
+            "name": "Lore",
+            "target": "lore"
+          }
+          
+        ]
+      },
+      "footer": {
+        "text": "© 2025 WikiTec - Todos los derechos reservados",
+        "socialLinks": {
+          "facebook": "https://facebook.com",
+          "twitter": "https://twitter.com",
+          "instagram": "https://instagram.com"
+        }
+      }
+    },
+    {
+      "id": "gerardo",
+      "title": "Gerardo Pitécus",
+      "content": {
+        "heading": "Gerardo Marrufo Palomera",
+        "description": "Gerardo es un individuo único en su especie.",
+        "imagen": "img/IMG_0243.PNG"
+      }
+    },
+    {
+      "id": "yuri",
+      "title": "Yuri Canhel",
+      "content": {
+        "heading": "Yuri Canhel Balam Toraya",
+        "description": "Yuri es un gran fanático de Sonic.",
+        "imagen": "img/IMG_0241.PNG"
+      }
+    },
+    {
+      "id": "Mikel",
+      "title": "Miguel Angel Palomera",
+      "content": {
+        "heading": "Miguel Angel Palomera",
+        "description": "Miguel primer neonazi en Yucatán, ex locutor de la k-buena.",
+        "imagen": "img/Miguel-Palomera (1).png"
+      }
+    }
+  ]
+}

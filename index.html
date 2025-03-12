@@ -1,89 +1,94 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WikiTec - Tu Wiki del Tecnológico</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script defer src="scripts.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WikiTec - Tu Wiki del Tecnológico</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script defer src="scripts.js"></script>
 </head>
 <body class="body-portada">
-    <div class="overlay"></div>
-    
-    <header>
-        <div class="logo-container">
-            <h1>
-                <i class="fa-solid fa-microchip tek-icon"></i>
-                <a href="index.html" class="wikitec">WikiTec</a>
-            </h1>
-        </div>
-        <div>
-            <button class="menu" id="menu-toggle">
-                <i class="fa-solid fa-bars"></i> Menú
-            </button>
-        </div>
-        <nav id="menu" class="hidden">
-            <ul>
-                <li><a href="Índice.html"><i class="fa-solid fa-list-ul"></i> Índice</a></li>
-                <li><a href="Gerardo.html"><i class="fa-solid fa-users"></i> Alumnos</a></li>
-                <li><a href="sitios.html"><i class="fa-solid fa-map-location-dot"></i> Sitios</a></li>
-                <li><a href="materias.html"><i class="fa-solid fa-book"></i> Materias</a></li>
-                <li><a href="lore.html"><i class="fa-solid fa-scroll"></i> Lore</a></li>
-                <li><a href="cementerio.html"><i class="fa-solid fa-skull"></i> Cementek</a></li>
-            </ul>
-        </nav>
-    </header>
+  <div class="overlay"></div>
+  
+  <header>
+    <div class="logo-container">
+      <h1>
+        <i class="fa-solid fa-microchip tek-icon"></i>
+        <!-- Ahora el enlace apunta al hash para la página de inicio -->
+        <a href="#inicio" class="wikitec">WikiTec</a>
+      </h1>
+    </div>
+    <div>
+      <button class="menu" id="menu-toggle">
+        <i class="fa-solid fa-bars"></i> Menú
+      </button>
+    </div>
+    <nav id="menu" class="hidden">
+      <ul>
+        <!-- Se usan enlaces hash para que el script maneje la navegación -->
+        <li><a href="#indice"><i class="fa-solid fa-list-ul"></i> Índice</a></li>
+        <li><a href="#Gerardo"><i class="fa-solid fa-users"></i> Alumnos</a></li>
+        <li><a href="#sitios"><i class="fa-solid fa-map-location-dot"></i> Sitios</a></li>
+        <li><a href="#materias"><i class="fa-solid fa-book"></i> Materias</a></li>
+        <li><a href="#lore"><i class="fa-solid fa-scroll"></i> Lore</a></li>
+        <li><a href="#cementerio"><i class="fa-solid fa-skull"></i> Cementek</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main class="home-content">
-        <div class="hero-section">
-            <h2 class="bienvenida">Bienvenido a <span class="wikitec-highlight">WikiTec</span></h2>
-            <p class="parrafo">Tu fuente de información sobre el Tecnológico, creada por y para estudiantes.</p>
-            
-            <div class="features-container">
-                <div class="feature-card">
-                    <i class="fa-solid fa-user-graduate"></i>
-                    <h3>Alumnos</h3>
-                    <p>Conoce a los estudiantes y sus historias.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fa-solid fa-chalkboard-teacher"></i>
-                    <h3>Materias</h3>
-                    <p>Información sobre las clases y programas.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fa-solid fa-landmark"></i>
-                    <h3>Sitios</h3>
-                    <p>Explora los lugares importantes del campus.</p>
-                </div>
-            </div>
-            
-            <div class="cta-section">
-                <a href="Índice.html" class="boton primary-btn">
-                    <i class="fa-solid fa-arrow-right"></i> Explorar WikiTec
-                </a>
-                <a href="lore.html" class="boton secondary-btn">
-                    <i class="fa-solid fa-book-open"></i> Descubre el Lore
-                </a>
-            </div>
+  <!-- Contenedor principal donde se inyectará el contenido dinámico -->
+  <main id="app" class="home-content">
+    <!-- Contenido por defecto (página de inicio) -->
+    <div class="hero-section">
+      <h2 class="bienvenida">Bienvenido a <span class="wikitec-highlight">WikiTec</span></h2>
+      <p class="parrafo">Tu fuente de información sobre el Tecnológico, creada por y para estudiantes.</p>
+      
+      <div class="features-container">
+        <div class="feature-card">
+          <i class="fa-solid fa-user-graduate"></i>
+          <h3>Alumnos</h3>
+          <p>Conoce a los estudiantes y sus historias.</p>
         </div>
-        
-        <div class="mascot-section">
-            <img class="gif bounce-effect" src="img/calavera.gif" alt="Calavera animada - Mascota de WikiTec">
-            <div class="mascot-info pulse-effect">
-                <p>¡Nuestra mascota te da la bienvenida!</p>
-            </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-chalkboard-teacher"></i>
+          <h3>Materias</h3>
+          <p>Información sobre las clases y programas.</p>
         </div>
-    </main>
+        <div class="feature-card">
+          <i class="fa-solid fa-landmark"></i>
+          <h3>Sitios</h3>
+          <p>Explora los lugares importantes del campus.</p>
+        </div>
+      </div>
+      
+      <div class="cta-section">
+        <a href="#indice" class="boton primary-btn">
+          <i class="fa-solid fa-arrow-right"></i> Explorar WikiTec
+        </a>
+        <a href="#lore" class="boton secondary-btn">
+          <i class="fa-solid fa-book-open"></i> Descubre el Lore
+        </a>
+      </div>
+    </div>
     
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 WikiTec - Wiki no oficial del Tecnológico</p>
-            <div class="social-links">
-                <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="social-icon"><i class="fa-brands fa-discord"></i></a>
-            </div>
-        </div>
-    </footer>
+    <div class="mascot-section">
+      <img class="gif bounce-effect" src="img/calavera.gif" alt="Calavera animada - Mascota de WikiTec">
+      <div class="mascot-info pulse-effect">
+        <p>¡Nuestra mascota te da la bienvenida!</p>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 WikiTec - Wiki no oficial del Tecnológico</p>
+      <div class="social-links">
+        <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fa-brands fa-discord"></i></a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
