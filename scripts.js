@@ -76,6 +76,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const navigateToPage = (pageId) => {
         if (!pages.includes(pageId)) return;
         
+        // Actualizar visibilidad de botones
+        const navButtons = document.querySelector('.navigation-buttons');
+        const isProfilePage = ['gerardo', 'yuri', 'miguel'].includes(pageId);
+        navButtons.style.display = isProfilePage ? 'flex' : 'none';
+        
+        // Resto de la lógica existente
         history.pushState({ pageId }, '', `?page=${pageId}`);
         updateContent(pageId);
         updateActiveLink(pageId);
@@ -202,10 +208,16 @@ document.addEventListener('DOMContentLoaded', () => {
         navigateToPage(pages[newIndex]);
     };
 
-    // ========== INICIALIZACIÓN ==========
     const handleInitialLoad = () => {
         const urlParams = new URLSearchParams(window.location.search);
         currentPageId = urlParams.get('page') || 'inicio';
+        
+        // Ocultar/mostrar botones inicialmente
+        const navButtons = document.querySelector('.navigation-buttons');
+        navButtons.style.display = ['gerardo', 'yuri', 'miguel'].includes(currentPageId) 
+            ? 'flex' 
+            : 'none';
+        
         navigateToPage(currentPageId);
     };
 

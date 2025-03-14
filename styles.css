@@ -292,3 +292,15 @@ main {
         font-size: 1rem;
     }
 }
+
+/* Ocultar botones por defecto */
+.navigation-buttons {
+    display: none;
+}
+
+/* Mostrar solo en páginas específicas */
+.body-gerardo .navigation-buttons,
+.body-yuri .navigation-buttons,
+.body-miguel .navigation-buttons {
+    display: flex;
+}
