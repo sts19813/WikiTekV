@@ -51,6 +51,18 @@
             "target": "gerardo"
           },
           {
+            "name": "Maestros",
+            "target": "maestros"
+          },
+          {
+            "name": "Cementec",
+            "target": "cementec"
+          },
+          {
+            "name": "Sitios",
+            "target": "sitios"
+          },
+          {
             "name": "Lore",
             "target": "lore"
           }
@@ -106,90 +118,133 @@
               }
           ]
       }
-  },
-  {
-    "id": "yuri",
-    "title": "Yuri Canhel",
-    "background": "img/fondo-yuri.jpg",
-    "content": {
-        "heading": "Yuri Canhel Balam Toraya",
-        "description": "Yuri es un gran fanático de Sonic, conocido por su creatividad...",
-        "imagen": "img/IMG_0241.PNG",
-        "info_adicional": [
-            {
-                "titulo": "Edad",
-                "contenido": "22 años",
-                "icono": "fa-calendar-days"
-            },
-            {
-              "titulo": "Formación Académica",
-              "contenido": "Estuvo en la UPY aunque tuvo 18 ex-tempos",
-              "icono": "fa-graduation-cap"
-          },
-          {
-              "titulo": "Habilidades Técnicas",
-              "contenido": "Dice que sabe react pero no a desarrollado nada en react, juega bien el smash",
-              "icono": "fa-code"
-          },
-          {
-              "titulo": "Proyectos Destacados",
-              "contenido": "Reparación de buggs en el checklist, (Santos tuvo que hacerlos bien)",
-              "icono": "fa-diagram-project"
-          },
-          {
-              "titulo": "Gustos",
-              "contenido": "Le gustan los Femboys",
-              "icono": "fa-gamepad"
-          },
-          {
-              "titulo": "Frase Celebre",
-              "contenido": "\"Nada mejor que una tarde de smash a lado de un Femboy\"",
-              "icono": "fa-quote-right"
-          }
-        ]
+    },
+    {
+      "id": "yuri",
+      "title": "Yuri Canhel",
+      "background": "img/fondo-yuri.jpg",
+      "content": {
+          "heading": "Yuri Canhel Balam Toraya",
+          "description": "Yuri es un gran fanático de Sonic, conocido por su creatividad...",
+          "imagen": "img/IMG_0241.PNG",
+          "info_adicional": [
+              {
+                  "titulo": "Edad",
+                  "contenido": "22 años",
+                  "icono": "fa-calendar-days"
+              },
+              {
+                "titulo": "Formación Académica",
+                "contenido": "Estuvo en la UPY aunque tuvo 18 ex-tempos",
+                "icono": "fa-graduation-cap"
+              },
+              {
+                  "titulo": "Habilidades Técnicas",
+                  "contenido": "Dice que sabe react pero no a desarrollado nada en react, juega bien el smash",
+                  "icono": "fa-code"
+              },
+              {
+                  "titulo": "Proyectos Destacados",
+                  "contenido": "Reparación de buggs en el checklist, (Santos tuvo que hacerlos bien)",
+                  "icono": "fa-diagram-project"
+              },
+              {
+                  "titulo": "Gustos",
+                  "contenido": "Le gustan los Femboys",
+                  "icono": "fa-gamepad"
+              },
+              {
+                  "titulo": "Frase Celebre",
+                  "contenido": "\"Nada mejor que una tarde de smash a lado de un Femboy\"",
+                  "icono": "fa-quote-right"
+              }
+          ]
+      }
+    },
+    {
+      "id": "miguel",
+      "title": "Miguel Angel Palomera",
+      "background": "img/fondo-miguel.jpg",
+      "content": {
+          "heading": "Miguel Angel Palomera",
+          "description": "Miguel el primer neonazi de Yucatán, aunque originario de Guadalajara Miguel es un trotamundos y ya a estado en diversas regiones de México",
+          "imagen": "img/Miguel-Palomera (1)-Photoroom.png",
+          "info_adicional": [
+              {
+                  "titulo": "Edad",
+                  "contenido": "37 años",
+                  "icono": "fa-calendar-days"
+              },
+              {
+                "titulo": "Formación Académica",
+                "contenido": "Tiene alrededor de 17 doctorados, aunque aún no se sabe en que",
+                "icono": "fa-graduation-cap"
+              },
+              {
+                  "titulo": "Habilidades Técnicas",
+                  "contenido": "Sabe aplicar la ley de Herodes, 'o te chingas o te jodes', es un gran líder, conocío a Jenny Rivera",
+                  "icono": "fa-code"
+              },
+              {
+                  "titulo": "Proyectos Destacados",
+                  "contenido": "Locutor de la K-buena, creador del libro hábitos atómicos",
+                  "icono": "fa-diagram-project"
+              },
+              {
+                  "titulo": "Gustos",
+                  "contenido": "Los perros, los nazis, sinaloenses.",
+                  "icono": "fa-gamepad"
+              },
+              {
+                  "titulo": "Frase Celebre",
+                  "contenido": "\"Odio a los virtuales\"",
+                  "icono": "fa-quote-right"
+              }
+          ]
+      }
+    },
+    {
+      "id": "nuevo-personaje",
+      "title": "Fernando Garza",
+      "background": "img/WhatsApp Image 2025-03-14 at 4.57.53 PM.jpeg",
+      "content": {
+          "heading": "Fernando Garza Medina",
+          "description": "Femboy número uno del salón, una de las personas más cotizadas por el padrote p.diddy, conocido antes por sus grandes dotes de fumador ahora solo se dedica a la programación<br>Dejo de ser el goleador de la selección de Yucatán para codificar en React.",
+          "imagen": "img/WhatsApp Image 2025-03-14 at 4.57.53 PM.jpeg",
+          "info_adicional": [
+              {
+                  "titulo": "Edad",
+                  "contenido": "19 años",
+                  "icono": "fa-calendar-days"
+              },
+              {
+                  "titulo": "Habilidades Técnicas",
+                  "contenido": "Fumador profesional de marihuana",
+                  "icono": "fa-code"
+              },
+              {
+                "titulo": "Formación Académica",
+                "contenido": "Hizo toda su prepa en el Cela, es la imagen del tec de software aunque solo va una vez por mes",
+                "icono": "fa-graduation-cap"
+              },
+              {
+                  "titulo": "Proyectos Destacados",
+                  "contenido": "Es el modelo #1 del tec de software",
+                  "icono": "fa-diagram-project"
+              },
+              {
+                  "titulo": "Gustos",
+                  "contenido": "Fumar, ver videos de Djs, ir a Belopam.",
+                  "icono": "fa-gamepad"
+              },
+              {
+                  "titulo": "Frase Celebre",
+                  "contenido": "\"Si sigues hablando te voy a chupar el pene.\"",
+                  "icono": "fa-quote-right"
+              }
+          ]
+      }
     }
-},
-{
-    "id": "miguel",
-    "title": "Miguel Angel Palomera",
-    "background": "img/fondo-miguel.jpg",
-    "content": {
-        "heading": "Miguel Angel Palomera",
-        "description": "Miguel el primer neonazi de Yucatán, aunque originario de Guadalajara Miguel es un trotamundos y ya a estado en diversas regiones de México",
-        "imagen": "img/Miguel-Palomera (1)-Photoroom.png",
-        "info_adicional": [
-            {
-                "titulo": "Edad",
-                "contenido": "37 años",
-                "icono": "fa-calendar-days"
-            },
-            {
-              "titulo": "Formación Académica",
-              "contenido": "Tiene alrededor de 17 doctorados, aunque aún no se sabe en que",
-              "icono": "fa-graduation-cap"
-          },
-          {
-              "titulo": "Habilidades Técnicas",
-              "contenido": "Sabe aplicar la ley de Herodes, 'o te chingas o te jodes', es un gran líder, conocío a Jenny Rivera",
-              "icono": "fa-code"
-          },
-          {
-              "titulo": "Proyectos Destacados",
-              "contenido": "Locutor de la K-buena, creador del libro hábitos atómicos",
-              "icono": "fa-diagram-project"
-          },
-          {
-              "titulo": "Gustos",
-              "contenido": "Los perros, los nazis, sinaloenses.",
-              "icono": "fa-gamepad"
-          },
-          {
-              "titulo": "Frase Celebre",
-              "contenido": "\"Odio a los virtuales\"",
-              "icono": "fa-quote-right"
-          }
-        ]
-    }
+  ]
 }
-]
-}
+
