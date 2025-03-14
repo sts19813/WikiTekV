@@ -48,19 +48,7 @@
           },
           {
             "name": "Alumnos",
-            "target": "alumnos"
-          },
-          {
-            "name": "Gerardo",
             "target": "gerardo"
-          },
-          {
-            "name": "Yuri",
-            "target": "yuri"
-          },
-          {
-            "name": "Mikel",
-            "target": "miguel"
           },
           {
             "name": "Lore",
@@ -134,30 +122,30 @@
                 "icono": "fa-calendar-days"
             },
             {
-                "titulo": "Especialidad",
-                "contenido": "Lore de Sonic",
-                "icono": "fa-palette"
-            },
-            {
-                "titulo": "Habilidades",
-                "contenido": "Se sabe toda la historia de sonic",
-                "icono": "fa-toolbox"
-            },
-            {
-                "titulo": "Proyecto Emblema",
-                "contenido": "Sistema de diseño para aplicaciones móviles",
-                "icono": "fa-mobile-screen"
-            },
-            {
-                "titulo": "Pasatiempos",
-                "contenido": "Catar nuevos femboys",
-                "icono": "fa-headphones"
-            },
-            {
-                "titulo": "Filosofía",
-                "contenido": "\"Los mejores femboys están en Perú\"",
-                "icono": "fa-comment-dots"
-            }
+              "titulo": "Formación Académica",
+              "contenido": "Estuvo en la UPY aunque tuvo 18 ex-tempos",
+              "icono": "fa-graduation-cap"
+          },
+          {
+              "titulo": "Habilidades Técnicas",
+              "contenido": "Dice que sabe react pero no a desarrollado nada en react, juega bien el smash",
+              "icono": "fa-code"
+          },
+          {
+              "titulo": "Proyectos Destacados",
+              "contenido": "Reparación de buggs en el checklist, (Santos tuvo que hacerlos bien)",
+              "icono": "fa-diagram-project"
+          },
+          {
+              "titulo": "Gustos",
+              "contenido": "Le gustan los Femboys",
+              "icono": "fa-gamepad"
+          },
+          {
+              "titulo": "Frase Celebre",
+              "contenido": "\"Nada mejor que una tarde de smash a lado de un Femboy\"",
+              "icono": "fa-quote-right"
+          }
         ]
     }
 },
@@ -167,39 +155,39 @@
     "background": "img/fondo-miguel.jpg",
     "content": {
         "heading": "Miguel Angel Palomera",
-        "description": "Miguel es una figura controvertida pero influyente...",
+        "description": "Miguel el primer neonazi de Yucatán, aunque originario de Guadalajara Miguel es un trotamundos y ya a estado en diversas regiones de México",
         "imagen": "img/Miguel-Palomera (1)-Photoroom.png",
         "info_adicional": [
             {
                 "titulo": "Edad",
-                "contenido": "45 años",
+                "contenido": "37 años",
                 "icono": "fa-calendar-days"
             },
             {
-                "titulo": "Experiencia",
-                "contenido": "20 años en desarrollo de software",
-                "icono": "fa-briefcase"
-            },
-            {
-                "titulo": "Expertise",
-                "contenido": "Arquitectura de sistemas, DevOps, Seguridad",
-                "icono": "fa-shield-halved"
-            },
-            {
-                "titulo": "Logro Destacado",
-                "contenido": "Sistema de votación electrónica nacional",
-                "icono": "fa-trophy"
-            },
-            {
-                "titulo": "Intereses",
-                "contenido": "Filosofía de la tecnología, historia de la computación",
-                "icono": "fa-book-open"
-            },
-            {
-                "titulo": "Reflexión",
-                "contenido": "\"La controversia puede ser el motor del cambio\"",
-                "icono": "fa-scale-balanced"
-            }
+              "titulo": "Formación Académica",
+              "contenido": "Tiene alrededor de 17 doctorados, aunque aún no se sabe en que",
+              "icono": "fa-graduation-cap"
+          },
+          {
+              "titulo": "Habilidades Técnicas",
+              "contenido": "Sabe aplicar la ley de Herodes, 'o te chingas o te jodes', es un gran líder, conocío a Jenny Rivera",
+              "icono": "fa-code"
+          },
+          {
+              "titulo": "Proyectos Destacados",
+              "contenido": "Locutor de la K-buena, creador del libro hábitos atómicos",
+              "icono": "fa-diagram-project"
+          },
+          {
+              "titulo": "Gustos",
+              "contenido": "Los perros, los nazis, sinaloenses.",
+              "icono": "fa-gamepad"
+          },
+          {
+              "titulo": "Frase Celebre",
+              "contenido": "\"Odio a los virtuales\"",
+              "icono": "fa-quote-right"
+          }
         ]
     }
 }

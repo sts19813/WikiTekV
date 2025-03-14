@@ -429,3 +429,32 @@ main {
     border-radius: 20px;
     backdrop-filter: blur(10px);
 }
+
+/* Mejora de navegación activa */
+nav a.active {
+    background: rgba(76, 154, 255, 0.3) !important;
+    transform: translateX(10px);
+}
+
+/* Efecto de transición suave para cambios de página */
+.profile-content {
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Ajuste final para botones de navegación */
+.navigation-buttons {
+    bottom: 30px;
+    right: 30px;
+    gap: 15px;
+}
+
+.nav-button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+}
+
+.nav-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: linear-gradient(135deg, #3a3a3a, #2d2d2d);
+}
