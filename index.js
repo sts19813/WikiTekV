@@ -8,10 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // ========== FUNCIONES PRINCIPALES ==========
     const initializeApp = async () => {
         setupMenu();
-        setupTheme();
         await loadCharacters();
         setupNavigation();
-        setupAnimations();
+        setupMenuNavigation();
         checkInitialView();
     };
 
@@ -20,44 +19,27 @@ document.addEventListener('DOMContentLoaded', () => {
         menuToggle.addEventListener('click', toggleMenu);
         document.addEventListener('click', closeMenuOnClickOutside);
         window.addEventListener('resize', handleResize);
-        if (window.innerWidth < 768) menu.classList.add('hidden');
     };
 
     const toggleMenu = (e) => {
         e.stopPropagation();
         menu.classList.toggle('hidden');
+        menuToggle.classList.toggle('active');
     };
 
     const closeMenuOnClickOutside = (e) => {
-        if (!menu.contains(e.target) && e.target !== menuToggle && window.innerWidth < 768) {
+        if (!menu.contains(e.target) && e.target !== menuToggle) {
             menu.classList.add('hidden');
+            menuToggle.classList.remove('active');
         }
     };
 
     const handleResize = () => {
-        window.innerWidth >= 768 
-            ? menu.classList.remove('hidden')
-            : menu.classList.add('hidden');
-    };
-
-    // ========== TEMA OSCURO ==========
-    const setupTheme = () => {
-        const themeToggle = document.getElementById('theme-toggle');
-        themeToggle?.addEventListener('click', toggleTheme);
-        applyTheme(currentTheme);
-    };
-
-    const toggleTheme = () => {
-        currentTheme = !currentTheme;
-        applyTheme(currentTheme);
-        localStorage.setItem('dark-theme', currentTheme);
-    };
-
-    const applyTheme = (isDark) => {
-        document.body.classList.toggle('dark-theme', isDark);
-        document.querySelectorAll('.dynamic-content').forEach(el => {
-            el.classList.toggle('dark-theme', isDark);
-        });
+        if (window.innerWidth >= 768) {
+            menu.classList.remove('hidden');
+        } else {
+            menu.classList.add('hidden');
+        }
     };
 
     // ========== CARGA DE DATOS ==========
@@ -66,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch('data.json');
             const data = await response.json();
             personajesDisponibles = data.personajes;
-            setupMenuNavigation();
         } catch (error) {
             console.error('Error cargando datos:', error);
         }
@@ -81,94 +62,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const handleRouteChange = () => {
         const urlParams = new URLSearchParams(window.location.search);
-        const section = urlParams.get('section');
         const characterId = urlParams.get('id');
-        
-        if (section === 'alumnos' || characterId) {
-            showProfileSection(characterId);
-        } else {
-            showHomePage();
-        }
+        characterId ? showProfileSection(characterId) : showHomePage();
     };
 
-    // ========== MANEJO DE VISTAS MEJORADO ==========
+    // ========== MANEJO DE VISTAS ==========
     const showHomePage = () => {
-        document.getElementById('home-content').classList.remove('hidden');
-        document.getElementById('profile-content').classList.add('hidden');
+        document.getElementById('app').innerHTML = `
+            <div class="hero-section">
+                <h1>Bienvenido a WikiTec</h1>
+                <div class="features-container">
+                    <div class="feature-card">
+                        <h3>Comunidad</h3>
+                        <p>Únete a nuestra comunidad de aprendizaje</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Recursos</h3>
+                        <p>Encuentra materiales y guías útiles</p>
+                    </div>
+                </div>
+            </div>
+        `;
         updateActiveMenuLink('home');
-        window.scrollTo(0, 0);
     };
 
-    const showProfileSection = (characterId = 'gerardo') => {
+    const showProfileSection = (characterId) => {
         const character = personajesDisponibles.find(c => c.id === characterId);
         if (!character) return;
 
-        updateProfileContent(character);
-        document.getElementById('home-content').classList.add('hidden');
-        document.getElementById('profile-content').classList.remove('hidden');
+        document.getElementById('app').innerHTML = `
+            <section class="profile-content">
+                <h2 id="personaje-titulo">${character.titulo}</h2>
+                <div class="content-wrapper">
+                    <img src="${character.imagenPerfil}" class="profile-image">
+                    <div class="text-content">
+                        <p>${character.biografia}</p>
+                        <div class="features-container" id="caracteristicas-container"></div>
+                    </div>
+                </div>
+            </section>
+        `;
         updateActiveMenuLink('alumnos');
-        window.scrollTo(0, 0);
-    };
-
-    // ========== ACTUALIZACIÓN DE CONTENIDO ==========
-    const updateProfileContent = (character) => {
-        const updateElement = (id, content) => {
-            const element = document.getElementById(id);
-            if (element) element.textContent = content;
-        };
-
-        const updateImage = (id, src) => {
-            const img = document.getElementById(id);
-            if (img) {
-                img.src = src;
-                img.style.display = src ? 'block' : 'none';
-            }
-        };
-
-        // Aplicar datos
-        document.body.className = character.claseBody;
-        updateElement('personaje-titulo', character.titulo);
-        updateElement('personaje-biografia', character.biografia);
-        updateElement('personaje-ocupacion', character.ocupacion);
-        updateImage('personaje-imagen', character.imagenPerfil);
-        updateImage('ocupacion-imagen', character.imagenOcupacion);
-
-        // Generar características
-        const featuresContainer = document.getElementById('caracteristicas-container');
-        featuresContainer.innerHTML = character.caracteristicas.map((feat, index) => `
-            <div class="caracteristica-item" data-delay="${index * 0.1}">
-                <button class="boton" data-target="${feat.id}">${feat.tituloBoton}</button>
-                <p id="${feat.id}" class="texto-oculto">${feat.contenido}</p>
-            </div>
-        `).join('');
-
-        // Configurar eventos
-        document.querySelectorAll('[data-target]').forEach(btn => {
-            btn.addEventListener('click', () => toggleText(btn.dataset.target));
-        });
-    };
-
-    // ========== INTERACTIVIDAD ==========
-    const toggleText = (targetId) => {
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-            targetElement.style.display = targetElement.style.display === 'block' ? 'none' : 'block';
-        }
-    };
-
-    // ========== PAGINACIÓN MEJORADA ==========
-    const navigatePrevious = () => navigateCharacters('prev');
-    const navigateNext = () => navigateCharacters('next');
-
-    const navigateCharacters = (direction) => {
-        const currentId = new URLSearchParams(window.location.search).get('id');
-        const currentIndex = personajesDisponibles.findIndex(c => c.id === currentId);
-        const newIndex = direction === 'next' 
-            ? (currentIndex + 1) % personajesDisponibles.length 
-            : (currentIndex - 1 + personajesDisponibles.length) % personajesDisponibles.length;
-        
-        history.pushState({}, '', `?section=alumnos&id=${personajesDisponibles[newIndex].id}`);
-        handleRouteChange();
     };
 
     // ========== NAVEGACIÓN DEL MENÚ ==========
@@ -176,67 +110,48 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('nav a').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
-                const section = this.dataset.section;
+                const target = this.getAttribute('href').substring(1);
                 
-                if (window.innerWidth < 768) menu.classList.add('hidden');
-
-                switch(section) {
-                    case 'home':
-                        history.pushState({}, '', '/');
-                        showHomePage();
-                        break;
-                    case 'alumnos':
-                        history.pushState({}, '', '?section=alumnos');
-                        showProfileSection();
-                        break;
-                    default:
-                        history.pushState({}, '', '/');
-                        showHomePage();
+                if (target === 'Gerardo') {
+                    history.pushState({}, '', `?id=gerardo`);
+                    showProfileSection('gerardo');
+                } else {
+                    history.pushState({}, '', '/');
+                    showHomePage();
+                }
+                
+                if (window.innerWidth < 768) {
+                    menu.classList.add('hidden');
+                    menuToggle.classList.remove('active');
                 }
             });
         });
     };
 
-    // ========== ACTUALIZAR ENLACE ACTIVO ==========
-    const updateActiveMenuLink = (activeSection) => {
-        document.querySelectorAll('nav a').forEach(link => {
-            link.classList.toggle('active', link.dataset.section === activeSection);
-        });
-    };
+    // ========== PAGINACIÓN ==========
+    const navigatePrevious = () => navigate(-1);
+    const navigateNext = () => navigate(1);
 
-    // ========== ANIMACIONES ==========
-    const setupAnimations = () => {
-        const animatedElements = document.querySelectorAll('.feature-card, .caracteristica-item');
+    const navigate = (direction) => {
+        const currentId = new URLSearchParams(window.location.search).get('id');
+        const currentIndex = personajesDisponibles.findIndex(c => c.id === currentId);
+        const newIndex = (currentIndex + direction + personajesDisponibles.length) % personajesDisponibles.length;
         
-        const checkVisibility = () => {
-            animatedElements.forEach(el => {
-                if (isElementVisible(el)) {
-                    el.classList.add('animated');
-                    el.style.animationDelay = el.dataset.delay || '0s';
-                }
-            });
-        };
-
-        window.addEventListener('scroll', checkVisibility);
-        checkVisibility();
+        history.pushState({}, '', `?id=${personajesDisponibles[newIndex].id}`);
+        showProfileSection(personajesDisponibles[newIndex].id);
     };
 
-    const isElementVisible = (el) => {
-        const rect = el.getBoundingClientRect();
-        return rect.top <= window.innerHeight * 0.75 && rect.bottom >= 0;
-    };
-
-    // ========== INICIALIZACIÓN FINAL ==========
+    // ========== INICIALIZACIÓN ==========
     const checkInitialView = () => {
         const urlParams = new URLSearchParams(window.location.search);
-        const section = urlParams.get('section');
         const characterId = urlParams.get('id');
+        characterId ? showProfileSection(characterId) : showHomePage();
+    };
 
-        if (section === 'alumnos' || characterId) {
-            showProfileSection(characterId);
-        } else {
-            showHomePage();
-        }
+    const updateActiveMenuLink = (activeSection) => {
+        document.querySelectorAll('nav a').forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === `#${activeSection}`);
+        });
     };
 
     initializeApp();
