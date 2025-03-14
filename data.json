@@ -47,6 +47,10 @@
             "target": "inicio"
           },
           {
+            "name": "Alumnos",
+            "target": "alumnos"
+          },
+          {
             "name": "Gerardo",
             "target": "gerardo"
           },
@@ -75,45 +79,129 @@
     },
     {
       "id": "gerardo",
-      "title": "Gerardo Pitécus",
+      "title": "Gerardo",
       "background": "img/fondo-gerardo.jpg",
       "content": {
-        "heading": "Gerardo Marrufo Palomera",
-        "description": "Gerardo es un individuo único en su especie. Nacido en Yucatán, Gerardo es conocido por su amor por la tecnología y su afición por la programación. Ha sido parte fundamental en varios proyectos del instituto, siempre buscando innovar y crear soluciones útiles.",
-        "imagen": "img/IMG_0243.PNG",
-        "extra_info": {
-          "hobbies": "Le gusta jugar videojuegos y escuchar música electrónica.",
-          "quote": "\"La tecnología es la clave para mejorar el futuro\"."
-        }
+          "heading": "Gerardo Marrufo Palomino",
+          "description": "Gerardo es un individuo único en su especie, el programador mediocre por definición",
+          "imagen": "img/IMG_0243.PNG",
+          "info_adicional": [
+              {
+                  "titulo": "Edad",
+                  "contenido": "21 años",
+                  "icono": "fa-calendar-days"
+              },
+              {
+                  "titulo": "Formación Académica",
+                  "contenido": "Apenas termino la primaria",
+                  "icono": "fa-graduation-cap"
+              },
+              {
+                  "titulo": "Habilidades Técnicas",
+                  "contenido": "Sabe leer, escribir y contar en maya, <strong>apenas sabe el abecedario en español</strong>",
+                  "icono": "fa-code"
+              },
+              {
+                  "titulo": "Proyectos Destacados",
+                  "contenido": "Creación de un botón en el checklist de Mayansoft, <strong>(Tardo tres semanas en realizarlo)</strong>",
+                  "icono": "fa-diagram-project"
+              },
+              {
+                  "titulo": "Gustos",
+                  "contenido": "Le gustan los travesaños",
+                  "icono": "fa-gamepad"
+              },
+              {
+                  "titulo": "Frase Celebre",
+                  "contenido": "\"Prefiero una trava bonita que una mujer fea\"",
+                  "icono": "fa-quote-right"
+              }
+          ]
       }
-    },
-    {
-      "id": "yuri",
-      "title": "Yuri Canhel",
-      "background": "img/fondo-yuri.jpg",
-      "content": {
+  },
+  {
+    "id": "yuri",
+    "title": "Yuri Canhel",
+    "background": "img/fondo-yuri.jpg",
+    "content": {
         "heading": "Yuri Canhel Balam Toraya",
-        "description": "Yuri es un gran fanático de Sonic, conocido por su creatividad en el diseño gráfico y su enfoque en la resolución de problemas mediante la programación. Se dedica a crear soluciones visuales en la web, y siempre está dispuesto a compartir su conocimiento con los demás.",
+        "description": "Yuri es un gran fanático de Sonic, conocido por su creatividad...",
         "imagen": "img/IMG_0241.PNG",
-        "extra_info": {
-          "hobbies": "Jugar videojuegos, principalmente de la saga de Sonic, y diseñar gráficos.",
-          "quote": "\"Cada línea de código es una oportunidad para mejorar.\""
-        }
-      }
-    },
-    {
-      "id": "miguel",
-      "title": "Miguel Angel Palomera",
-      "background": "img/fondo-miguel.jpg",
-      "content": {
-        "heading": "Miguel Angel Palomera",
-        "description": "Miguel es el primer neonazi en Yucatán, ex locutor de la K-Buena, y un apasionado de la tecnología. A pesar de su polémica figura pública, ha trabajado en diversas iniciativas para promover el pensamiento crítico y la reflexión dentro de la comunidad.",
-        "imagen": "img/Miguel-Palomera (1)-Photoroom.png",
-        "extra_info": {
-          "hobbies": "La música y la programación.",
-          "quote": "\"La controversia puede ser el motor del cambio.\""
-        }
-      }
+        "info_adicional": [
+            {
+                "titulo": "Edad",
+                "contenido": "22 años",
+                "icono": "fa-calendar-days"
+            },
+            {
+                "titulo": "Especialidad",
+                "contenido": "Lore de Sonic",
+                "icono": "fa-palette"
+            },
+            {
+                "titulo": "Habilidades",
+                "contenido": "Se sabe toda la historia de sonic",
+                "icono": "fa-toolbox"
+            },
+            {
+                "titulo": "Proyecto Emblema",
+                "contenido": "Sistema de diseño para aplicaciones móviles",
+                "icono": "fa-mobile-screen"
+            },
+            {
+                "titulo": "Pasatiempos",
+                "contenido": "Catar nuevos femboys",
+                "icono": "fa-headphones"
+            },
+            {
+                "titulo": "Filosofía",
+                "contenido": "\"Los mejores femboys están en Perú\"",
+                "icono": "fa-comment-dots"
+            }
+        ]
     }
-  ]
+},
+{
+    "id": "miguel",
+    "title": "Miguel Angel Palomera",
+    "background": "img/fondo-miguel.jpg",
+    "content": {
+        "heading": "Miguel Angel Palomera",
+        "description": "Miguel es una figura controvertida pero influyente...",
+        "imagen": "img/Miguel-Palomera (1)-Photoroom.png",
+        "info_adicional": [
+            {
+                "titulo": "Edad",
+                "contenido": "45 años",
+                "icono": "fa-calendar-days"
+            },
+            {
+                "titulo": "Experiencia",
+                "contenido": "20 años en desarrollo de software",
+                "icono": "fa-briefcase"
+            },
+            {
+                "titulo": "Expertise",
+                "contenido": "Arquitectura de sistemas, DevOps, Seguridad",
+                "icono": "fa-shield-halved"
+            },
+            {
+                "titulo": "Logro Destacado",
+                "contenido": "Sistema de votación electrónica nacional",
+                "icono": "fa-trophy"
+            },
+            {
+                "titulo": "Intereses",
+                "contenido": "Filosofía de la tecnología, historia de la computación",
+                "icono": "fa-book-open"
+            },
+            {
+                "titulo": "Reflexión",
+                "contenido": "\"La controversia puede ser el motor del cambio\"",
+                "icono": "fa-scale-balanced"
+            }
+        ]
+    }
+}
+]
 }

@@ -304,3 +304,128 @@ main {
 .body-miguel .navigation-buttons {
     display: flex;
 }
+
+.mascot-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alineación horizontal */
+    text-align: center; /* Alineación del texto */
+    margin: 2rem 0;
+}
+
+.mascot {
+    max-width: 200px; /* Control del tamaño */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centrado adicional */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Si usas flexbox en el contenedor padre */
+.profile-grid,
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos para las secciones de información */
+.info-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.info-card {
+    background: rgba(27, 38, 59, 0.7);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.info-header i {
+    font-size: 1.5rem;
+    color: #4C9AFF;
+}
+
+.info-header h3 {
+    margin: 0;
+    color: #FFD966;
+}
+
+/* Tamaño de imágenes de perfil */
+.profile-image {
+    max-width: 250px; /* Reducción de tamaño */
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Efecto hover para mantener interactividad */
+.profile-image:hover {
+    transform: scale(1.03);
+}
+
+/* Ajuste específico para dispositivos móviles */
+@media (max-width: 768px) {
+    .profile-image {
+        max-width: 200px;
+        margin: 1rem auto;
+    }
+    
+    .profile-grid {
+        gap: 1rem;
+    }
+}
+
+/* Contenedor de imagen con posicionamiento relativo */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: start;
+    margin-top: 2rem;
+}
+
+/* Ajustes para texto junto a la imagen */
+.profile-info {
+    padding: 0 1.5rem;
+    background: rgba(13, 27, 42, 0.6);
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+}
+
+/* Mantener proporción en diferentes pantallas */
+@media (max-width: 1024px) {
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-image {
+        justify-self: center;
+    }
+}
+
+/* Mejora en bordes y sombras */
+.profile-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(13, 27, 42, 0.4);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}

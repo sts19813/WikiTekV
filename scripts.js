@@ -143,25 +143,29 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
 
     const generateProfileContent = (data) => `
-        <section class="profile-content">
-            <h2>${data.content.heading}</h2>
-            <div class="profile-grid">
-                <img src="${data.content.imagen}" alt="${data.title}" class="profile-image">
+    <section class="profile-content">
+        <h2>${data.content.heading}</h2>
+        <div class="profile-grid">
+            <img src="${data.content.imagen}" alt="${data.title}" class="profile-image">
+            
+            <div class="profile-info">
+                <p>${data.content.description}</p>
                 
-                <div class="profile-info">
-                    <p>${data.content.description}</p>
-                    
-                    ${data.content.extra_info ? `
-                    <div class="extra-info">
-                        <h3>Datos adicionales</h3>
-                        <p>${data.content.extra_info.hobbies}</p>
-                        <blockquote>${data.content.extra_info.quote}</blockquote>
-                    </div>
-                    ` : ''}
+                <div class="info-sections">
+                    ${data.content.info_adicional.map(section => `
+                        <div class="info-card">
+                            <div class="info-header">
+                                <i class="fa-solid ${section.icono}"></i>
+                                <h3>${section.titulo}</h3>
+                            </div>
+                            <p>${section.contenido}</p>
+                        </div>
+                    `).join('')}
                 </div>
             </div>
-        </section>
-    `;
+        </div>
+    </section>
+`;
 
     // ========== ACTUALIZACIÓN DE ESTILOS ==========
     const updateBackground = (pageId) => {
@@ -233,3 +237,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initApp();
 });
+
