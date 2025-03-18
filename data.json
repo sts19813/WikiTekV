@@ -244,8 +244,34 @@
               }
           ]
       }
+    },
+    {
+      "id": "javi-sex",
+      "title": "Javier Hoyos",
+      "background": "img/IMG_0241.PNG",
+      "content": {
+        "heading": "Javier Emmanuel Hoyos Cetina",
+        "description": "Desarrollador full-stack con pasión por la inteligencia artificial.",
+        "imagen": "img/juan-perfil.jpg",
+        "info_adicional": [
+          {
+            "titulo": "Edad",
+            "contenido": "25 años",
+            "icono": "fa-calendar-days"
+          },
+          {
+            "titulo": "Habilidades",
+            "contenido": "Python, React, Machine Learning",
+            "icono": "fa-code"
+          },
+          {
+            "titulo": "Proyecto Destacado",
+            "contenido": "Sistema de reconocimiento facial para el Tec",
+            "icono": "fa-diagram-project"
+          }
+        ]
+      }
     }
   ]
 }
-
 

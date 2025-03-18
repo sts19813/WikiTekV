@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentData = null;
     let currentPageId = 'inicio';
     let pages = [];
-    const profilePages = ['gerardo', 'yuri', 'miguel','fer']; // Array específico de perfiles
+    const profilePages = ['gerardo', 'yuri', 'miguel','nuevo-personaje', 'javi-sex']; // Array específico de perfiles
 
     // ========== GENERADORES DE CONTENIDO ==========
     const generateHomeContent = (data) => `
