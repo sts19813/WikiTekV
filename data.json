@@ -80,7 +80,7 @@
     {
       "id": "gerardo",
       "title": "Gerardo",
-      "background": "img/fondo-gerardo.jpg",
+      "background": "img/",
       "content": {
           "heading": "Gerardo Marrufo Palomino",
           "description": "Gerardo es un individuo único en su especie, el programador mediocre por definición",
@@ -234,7 +234,7 @@
               },
               {
                   "titulo": "Gustos",
-                  "contenido": "Fumar, ver videos de Djs, ir a Belopam.",
+                  "contenido": "Ver rils, ver videos de Djs, ir a Belopam, ir a patio petanca.",
                   "icono": "fa-gamepad"
               },
               {
@@ -247,4 +247,5 @@
     }
   ]
 }
+
 
