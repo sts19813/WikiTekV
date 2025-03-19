@@ -1,0 +1,292 @@
+{
+  "pages": [
+    {
+      "id": "inicio",
+      "title": "Bienvenido a WikiTec",
+      "background": "img/fondo-inicio.jpg",
+      "content": {
+        "heading": "Bienvenido a WikiTec",
+        "description": "WikiTec es el lugar donde aprenderás todo acerca de la escuela Instituto Tecnológico de Software <b>padre de la UPY</b>, en esta web encontrarás contenido acerca de alumnos, sitios, materias, maestros, etc; diviértete y pásate un buen rato aprendiendo acerca de esta escuela y sus integrantes :).",
+        "features": [
+          {
+            "icon": "fa-users",
+            "title": "Comunidad",
+            "description": "Únete a una comunidad de aprendizaje."
+          },
+          {
+            "icon": "fa-file-alt",  
+            "title": "Formulario",
+            "description": "Formulario para saber qué deseas añadir."
+          },
+          {
+            "icon": "fa-handshake", 
+            "title": "Saludos",
+            "description": "Agradecemos tu visita y esperamos que te haya sido útil este sitio web."
+          }
+        ],
+        "cta1": {
+          "link": "/learn-more",
+          "icon": "fa-info",
+          "text": "Aprende más"
+        },
+        "cta2": {
+          "link": "/join-us",
+          "icon": "fa-users",
+          "text": "Únete"
+        },
+        "mascot": {
+          "image": "img/calavera.gif",
+          "alt": "Mascota de WikiTec",
+          "info": "Conoce a nuestra mascota."
+        }
+      },
+      "header": {
+        "menu": [
+          {
+            "name": "Inicio",
+            "target": "inicio"
+          },
+          {
+            "name": "Alumnos",
+            "target": "gerardo"
+          },
+          {
+            "name": "Maestros",
+            "target": "maestros"
+          },
+          {
+            "name": "Cementec",
+            "target": "cementec"
+          },
+          {
+            "name": "Sitios",
+            "target": "sitios"
+          },
+          {
+            "name": "Lore",
+            "target": "lore"
+          }
+        ]
+      },
+      "footer": {
+        "text": "© 2025 WikiTec - Todos los derechos reservados",
+        "socialLinks": {
+          "facebook": "https://facebook.com",
+          "twitter": "https://twitter.com",
+          "instagram": "https://instagram.com"
+        }
+      }
+    },
+    {
+      "id": "gerardo",
+      "title": "Gerardo",
+      "background": "img/",
+      "content": {
+          "heading": "Gerardo Marrufo Palomino",
+          "description": "Gerardo es un individuo único en su especie, el programador mediocre por definición",
+          "imagen": "img/IMG_0243.PNG",
+          "info_adicional": [
+              {
+                  "titulo": "Edad",
+                  "contenido": "21 años",
+                  "icono": "fa-calendar-days"
+              },
+              {
+                  "titulo": "Formación Académica",
+                  "contenido": "Apenas termino la primaria",
+                  "icono": "fa-graduation-cap"
+              },
+              {
+                  "titulo": "Habilidades Técnicas",
+                  "contenido": "Sabe leer, escribir y contar en maya, <strong>apenas sabe el abecedario en español</strong>",
+                  "icono": "fa-code"
+              },
+              {
+                  "titulo": "Proyectos Destacados",
+                  "contenido": "Creación de un botón en el checklist de Mayansoft, <strong>(Tardo tres semanas en realizarlo)</strong>",
+                  "icono": "fa-diagram-project"
+              },
+              {
+                  "titulo": "Gustos",
+                  "contenido": "Le gustan los travesaños",
+                  "icono": "fa-gamepad"
+              },
+              {
+                  "titulo": "Frase Celebre",
+                  "contenido": "\"Prefiero una traba bonita que una mujer fea\"",
+                  "icono": "fa-quote-right"
+              }
+          ]
+      }
+    },
+    {
+      "id": "yuri",
+      "title": "Yuri Canhel",
+      "background": "img/fondo-yuri.jpg",
+      "content": {
+          "heading": "Yuri Canhel Balam Toraya",
+          "description": "Yuri es un gran fanático de Sonic, conocido por su creatividad...",
+          "imagen": "img/IMG_0241.PNG",
+          "info_adicional": [
+              {
+                  "titulo": "Edad",
+                  "contenido": "22 años",
+                  "icono": "fa-calendar-days"
+              },
+              {
+                "titulo": "Formación Académica",
+                "contenido": "Estuvo en la UPY aunque tuvo 18 ex-tempos",
+                "icono": "fa-graduation-cap"
+              },
+              {
+                  "titulo": "Habilidades Técnicas",
+                  "contenido": "Dice que sabe react pero no a desarrollado nada en react, juega bien el smash",
+                  "icono": "fa-code"
+              },
+              {
+                  "titulo": "Proyectos Destacados",
+                  "contenido": "Reparación de buggs en el checklist, (Santos tuvo que hacerlos bien)",
+                  "icono": "fa-diagram-project"
+              },
+              {
+                  "titulo": "Gustos",
+                  "contenido": "Le gustan los Femboys",
+                  "icono": "fa-gamepad"
+              },
+              {
+                  "titulo": "Frase Celebre",
+                  "contenido": "\"Nada mejor que una tarde de smash a lado de un Femboy\"",
+                  "icono": "fa-quote-right"
+              }
+          ]
+      }
+    },
+    {
+      "id": "miguel",
+      "title": "Miguel Angel Palomera",
+      "background": "img/fondo-miguel.jpg",
+      "content": {
+          "heading": "Miguel Angel Palomera",
+          "description": "Miguel el primer neonazi de Yucatán, aunque originario de Guadalajara Miguel es un trotamundos y ya a estado en diversas regiones de México",
+          "imagen": "img/Miguel-Palomera (1)-Photoroom.png",
+          "info_adicional": [
+              {
+                  "titulo": "Edad",
+                  "contenido": "37 años",
+                  "icono": "fa-calendar-days"
+              },
+              {
+                "titulo": "Formación Académica",
+                "contenido": "Tiene alrededor de 17 doctorados, aunque aún no se sabe en que",
+                "icono": "fa-graduation-cap"
+              },
+              {
+                  "titulo": "Habilidades Técnicas",
+                  "contenido": "Sabe aplicar la ley de Herodes, 'o te chingas o te jodes', es un gran líder, conocío a Jenny Rivera",
+                  "icono": "fa-code"
+              },
+              {
+                  "titulo": "Proyectos Destacados",
+                  "contenido": "Locutor de la K-buena, creador del libro hábitos atómicos",
+                  "icono": "fa-diagram-project"
+              },
+              {
+                  "titulo": "Gustos",
+                  "contenido": "Los perros, los nazis, sinaloenses.",
+                  "icono": "fa-gamepad"
+              },
+              {
+                  "titulo": "Frase Celebre",
+                  "contenido": "\"Odio a los virtuales\"",
+                  "icono": "fa-quote-right"
+              }
+          ]
+      }
+    },
+    {
+      "id": "nuevo-personaje",
+      "title": "Fernando Garza",
+      "background": "img/WhatsApp Image 2025-03-14 at 4.57.53 PM.jpeg",
+      "content": {
+          "heading": "Fernando Garza Medina",
+          "description": "Femboy número uno del salón, una de las personas más cotizadas por el padrote p.diddy, conocido antes por sus grandes dotes de fumador ahora solo se dedica a la programación<br>Dejo de ser el goleador de la selección de Yucatán para codificar en React.",
+          "imagen": "img/WhatsApp Image 2025-03-14 at 4.57.53 PM.jpeg",
+          "info_adicional": [
+              {
+                  "titulo": "Edad",
+                  "contenido": "19 años",
+                  "icono": "fa-calendar-days"
+              },
+              {
+                  "titulo": "Habilidades Técnicas",
+                  "contenido": "Fumador profesional de marihuana",
+                  "icono": "fa-code"
+              },
+              {
+                "titulo": "Formación Académica",
+                "contenido": "Hizo toda su prepa en el Cela, es la imagen del tec de software aunque solo va una vez por mes",
+                "icono": "fa-graduation-cap"
+              },
+              {
+                  "titulo": "Proyectos Destacados",
+                  "contenido": "Es el modelo #1 del tec de software",
+                  "icono": "fa-diagram-project"
+              },
+              {
+                  "titulo": "Gustos",
+                  "contenido": "Ver rils, ver videos de Djs, ir a Belopam, ir a patio petanca.",
+                  "icono": "fa-gamepad"
+              },
+              {
+                  "titulo": "Frase Celebre",
+                  "contenido": "\"Si sigues hablando te voy a chupar el pene.\"",
+                  "icono": "fa-quote-right"
+              }
+          ]
+      }
+    },
+    {
+      "id": "javi-sex",
+      "title": "Javier Hoyos",
+      "background": "img/IMG_0241.PNG",
+      "content": {
+        "heading": "Javier Emmanuel Hoyos Cetina",
+        "description": "La mayor perra de la historia del tec, #1 lamehuevos de Accenture, hay quienes dicen que desde que era un bebé ya codificaba, amante del barcelona, odia si trabajo pero no puede vivir sin una computadora.",
+        "imagen": "img/Javier-Hoyos (2)-Photoroom.png",
+        "info_adicional": [
+          {
+            "titulo": "Edad",
+            "contenido": "24 años",
+            "icono": "fa-calendar-days"
+          },
+          {
+            "titulo": "Habilidades Técnicas",
+            "contenido": "Ser gruñon, pendejear a los que no son ingenieros.",
+            "icono": "fa-code"
+          },
+          {
+          "titulo": "Formación Académica",
+          "contenido": "Es ingeniero pero de la (UTM)",
+          "icono": "fa-graduation-cap"
+          },
+          {
+            "titulo": "Proyectos Destacados",
+            "contenido": "Gano una plaza en Accenture por nunca faltar a clases.",
+            "icono": "fa-diagram-project"
+          },
+          {
+            "titulo": "Gustos",
+            "contenido": "Maxi, su computadora, Accenture.",
+            "icono": "fa-gamepad"
+          },
+          {
+            "titulo": "Frase Celebre",
+            "contenido": "\"Te voy a violar.\"",
+            "icono": "fa-quote-right"
+          }
+        ]
+      }
+    }
+  ]
+}
+
